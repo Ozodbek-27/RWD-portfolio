@@ -251,6 +251,69 @@ main .hero-img h2:last-child {
 	transition: 0.3s;
 	cursor: pointer;
 }
+/* Brands */
+
+.brands {
+	background-color: var(--white);
+	width: 100%;
+	padding: 3% 3%;
+	position: relative;
+	z-index: 2;
+}
+
+.brands:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(Images/white-abstract-texture-background.jpg);
+	background-size: contain;
+	opacity: 0.3;
+	z-index: -1;
+}
+
+.brands:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: var(--white);
+	z-index: 1;
+	border-radius: 0 0 200px 200px;
+}
+
+.brands .brands-swiper {
+	width: 100%;
+}
+
+.brand-img {
+	width: 250px;
+	height: 150px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.brand-img img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	opacity: 0.7;
+	transition: 0.3s;
+	cursor: pointer;
+}
+
+.brand-img:hover img {
+	opacity: 1;
+}
+
+.dark .brand-img img {
+	filter: invert(1);
+}
 
 .hero-content button:hover {
 	background-color: var(--white);
@@ -301,7 +364,7 @@ main .hero-img h2:last-child {
 	}
 
 	.menu-icons-wrap .mode {
-		opacity: 1;
+		opacity: 0;
 	}
 
 	#closeMenu {
@@ -337,5 +400,25 @@ main .hero-img h2:last-child {
 	.menu.show {
 		height: 150px;
 		opacity: 1;
+	}
+}
+
+@media (max-width: 767px) {
+	.hero-content {
+		width: 100%;
+	}
+	main {
+		height: 90%;
+	}
+}
+
+@media (max-width: 575px) {
+	.hero-content h1 {
+		font-size: 3rem;
+		line-height: 3.5rem;
+	}
+
+	.logo button {
+		display: none;
 	}
 }
