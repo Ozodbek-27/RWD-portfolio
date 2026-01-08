@@ -52,10 +52,10 @@ themeBtns.forEach(btn => {
 
 const swiper = new Swiper('.brands-swiper', {
 	loop: true,
-	spaceBetween: 20,
+	spaceBetween: 25,
 	slidesPerView: 6,
 	autoplay: {
-		delay: 1000,
+		delay: 1500,
 		disableOnInteraction: false,
 	},
 	breakpoints: {
